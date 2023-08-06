@@ -1,0 +1,546 @@
+
+/*Algunas definiciones generales*/
+
+body {
+  background: rgb(65,133,13);
+  background: linear-gradient(90deg, rgba(65,133,13,1) 29%, rgba(0,0,0,1) 96%);
+}
+
+h2 {
+    font-family: 'RobotoCondensed';
+    color: white;
+    font-size: 60px;
+    text-align: center;
+    padding: 20px;
+  }
+
+  @font-face {
+    font-family:'RobotoCondensed';
+    src: url(./fonts/RobotoCondensed-Regular.ttf) format('truetype');
+    font-style: normal;
+    font-weight: normal;
+  }
+
+  /* Empieza el encabezado de la pagina */
+
+.titulo {
+    font-family: 'RobotoCondensed';
+    color: #fff; 
+    text-align: center;
+    letter-spacing: 3px;
+    padding-top: 10px;
+}
+
+.fotoPersonal {
+    width: 250px; /* Ajusta el tamaño de la imagen a tu preferencia */
+    height: 250px; /* Ajusta el tamaño de la imagen a tu preferencia */
+    border-radius: 50%; /* Hace que la imagen tenga forma circular */
+    overflow: hidden; /* Oculta cualquier contenido que se salga del contenedor circular */
+    margin-top: 10%;
+    margin-left: 40%;
+    border: 4px solid;
+    border-color: #5EEB5B;
+}
+
+.fotoPersonal img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen dentro del contenedor manteniendo la proporción */
+}
+
+.presentacion {
+    font-family:'RobotoCondensed';
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    padding-bottom: 8%;
+}
+
+#categorias {
+    font-family: 'RobotoCondensed';
+    font-size: 100%;
+    list-style: none;
+    padding: 0; /* Eliminamos el padding para que no haya espacios extra */
+    margin: 0; /* Eliminamos el margen para que no haya espacios extra */
+    background-color: #62AB37; /* Color de fondo de la barra de navegación */
+    position: fixed; /* Fijamos la barra de navegación en la parte superior */
+    top: 0; /* Posicionamos la barra en la parte superior */
+    left: 0; /* Alineamos la barra a la izquierda */
+    width: 100%; 
+    text-align: center;
+}
+
+#categorias li {
+    display: inline-block; /* Convertimos los elementos en línea horizontal */
+    margin: 0;
+}
+
+#categorias li a {
+    padding: 70px 70px 15px;
+    text-decoration: none;
+    color:white;
+    background-color: #62AB37;
+}
+
+#categorias li a:hover {
+    color: black;
+    background-color: #5EEB5B;
+}
+
+/*Empieza el cuerpo de la pagina*/
+
+#expLa h2 {
+  background-image: url(./img/work.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 70px;
+  -webkit-text-stroke: 1px black ; /*Le pone borde negro a la fuente*/
+}
+
+#estudios h2 {
+  background-image: url(./img/study.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 70px;
+  -webkit-text-stroke: 1px black ;
+}
+
+#devTools h2 {
+  background-image: url(./img/proyects.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 70px;
+  -webkit-text-stroke: 1px black ;
+}
+
+#contact h2 {
+  background-color: #62AB37;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 10px;
+  -webkit-text-stroke: 1px black ;
+}
+
+.tabledatos, .tabledatos th, .tabledatos tr, .tabledatos td {
+    letter-spacing: normal;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    table-layout: fixed;
+    width: 100%;
+    text-align: left;
+    border: 1px solid black;
+    border-collapse: collapse;
+    background-color: #62AB37;
+    list-style: none;
+    color: white;
+}
+
+.tabledatos th {
+    font-family: 'RobotoCondensed';
+    color: black;
+    background-color: white;
+    padding: 20px;
+  }
+
+.tabledatos td {
+    padding: 30px;
+}
+
+.tools {
+  text-align: center;
+  margin-left: 27%; 
+}
+
+.tools li {
+    display: inline-block;
+    color: #fff;
+    font-size: 40px;
+    font-family:'RobotoCondensed';
+    list-style:none;
+    background-size:cover;
+    padding: 30px;
+}
+
+.tools > img {
+  display: inline-block;
+  width: 50px;
+  list-style: none;
+  padding: 0; 
+  margin: 0;
+}
+
+/*Dev Tools*/
+
+/*Piramide giratoria*/
+
+.pyramid-loader {
+    width: 50px;
+    height: 50px;
+    display: block;
+    transform-style: preserve-3d;
+    transform: rotateX(-20deg);
+    float:left;
+  }
+  
+  .wrapper {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    animation: spin 5s linear infinite;
+  }
+  
+  @keyframes spin {
+    100% {
+      transform: rotateY(360deg);
+    }
+  }
+  
+  .pyramid-loader .wrapper .side {
+    width: 70px;
+    height: 70px;
+  /* you can choose any gradient or color you want */
+    /* background: radial-gradient( #2F2585 10%, #F028FD 70%, #2BDEAC 120%); */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    transform-origin: center top;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  }
+  
+  .pyramid-loader .wrapper .side1 {
+    transform: rotateZ(-30deg) rotateY(90deg);
+    background: conic-gradient( #2BDEAC, #F028FD, #D8CCE6, #2F2585);
+  }
+  
+  .pyramid-loader .wrapper .side2 {
+    transform: rotateZ(30deg) rotateY(90deg);
+    background: conic-gradient( #2F2585, #D8CCE6, #F028FD, #2BDEAC);
+  }
+  
+  .pyramid-loader .wrapper .side3 {
+    transform: rotateX(30deg);
+    background: conic-gradient( #2F2585, #D8CCE6, #F028FD, #2BDEAC);
+  }
+  
+  .pyramid-loader .wrapper .side4 {
+    transform: rotateX(-30deg);
+    background: conic-gradient( #2BDEAC, #F028FD, #D8CCE6, #2F2585);
+  }
+  
+  .pyramid-loader .wrapper .shadow {
+    width: 60px;
+    height: 60px;
+    background: #8B5AD5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    transform: rotateX(90deg) translateZ(-40px);
+    filter: blur(12px);
+  }
+  
+/*Continuan las Dev Tools*/
+
+
+#devTools {
+    padding: 0; /* Eliminamos el padding para que no haya espacios extra */
+    margin: 0; /* Eliminamos el margen para que no haya espacios extra */
+    list-style: none;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-bottom: 20px;
+}
+
+/*Seccion proyectos*/
+
+#proyects {
+  display: inline-block;
+  padding-bottom: 10%;
+  margin-left: 23%;
+}
+
+/*Books*/
+
+.book1 {
+  float: left;
+  border-radius: 10px;
+  width: 220px;
+  height: 300px;
+  background-color: whitesmoke;
+  -webkit-box-shadow: 1px 1px 12px #000;
+  box-shadow: 1px 1px 12px #000;
+  -webkit-transform: preserve-3d;
+  -ms-transform: preserve-3d;
+  transform: preserve-3d;
+  -webkit-perspective: 2000px;
+  perspective: 2000px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #000;
+}
+
+.cover1 {
+  top: 0;
+  position: absolute;
+  background-color: lightgray;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transform-origin: 0;
+  -ms-transform-origin: 0;
+  transform-origin: 0;
+  -webkit-box-shadow: 1px 1px 12px #000;
+  box-shadow: 1px 1px 12px #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.book1:hover .cover1 {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transform: rotatey(-80deg);
+  -ms-transform: rotatey(-80deg);
+  transform: rotatey(-80deg);
+}
+
+.book1 p {
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.book2 {
+  margin-left: 30px;
+  float: left;
+  border-radius: 10px;
+  width: 220px;
+  height: 300px;
+  background-color: whitesmoke;
+  -webkit-box-shadow: 1px 1px 12px #000;
+  box-shadow: 1px 1px 12px #000;
+  -webkit-transform: preserve-3d;
+  -ms-transform: preserve-3d;
+  transform: preserve-3d;
+  -webkit-perspective: 2000px;
+  perspective: 2000px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #000;
+}
+
+.cover2 {
+  top: 0;
+  position: absolute;
+  background-color: lightgray;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transform-origin: 0;
+  -ms-transform-origin: 0;
+  transform-origin: 0;
+  -webkit-box-shadow: 1px 1px 12px #000;
+  box-shadow: 1px 1px 12px #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.book2:hover .cover2 {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transform: rotatey(-80deg);
+  -ms-transform: rotatey(-80deg);
+  transform: rotatey(-80deg);
+}
+
+.book2 p {
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.book3 {
+  margin-left: 30px;
+  float: right;
+  border-radius: 10px;
+  width: 220px;
+  height: 300px;
+  background-color: whitesmoke;
+  -webkit-box-shadow: 1px 1px 12px #000;
+  box-shadow: 1px 1px 12px #000;
+  -webkit-transform: preserve-3d;
+  -ms-transform: preserve-3d;
+  transform: preserve-3d;
+  -webkit-perspective: 2000px;
+  perspective: 2000px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #000;
+}
+
+.cover3 {
+  top: 0;
+  position: absolute;
+  background-color: lightgray;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transform-origin: 0;
+  -ms-transform-origin: 0;
+  transform-origin: 0;
+  -webkit-box-shadow: 1px 1px 12px #000;
+  box-shadow: 1px 1px 12px #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.book3:hover .cover3 {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transform: rotatey(-80deg);
+  -ms-transform: rotatey(-80deg);
+  transform: rotatey(-80deg);
+}
+
+.book3 p {
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+/*Empieza el footer de la pagina */
+
+#contact {
+    border-color: black;
+    background-color: #62AB37;
+    background-size: cover;
+    text-align: center;
+    padding: 40px;
+    color: black;
+}
+
+/*Boton de enviar formulario personalizado*/
+
+.btn-class-name {
+  margin-top: 30px;
+  margin-left: 45%;
+  --color: 180,255, 100;
+  border-radius: .5em;
+  transition: .3s;
+  background-color: rgba(var(--color), .2);
+  color: rgb(var(--color));
+  fill: rgb(var(--color));
+  font-family: monospace;
+  font-weight: bolder;
+  font-size: x-large;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  border: 2px solid rgb(var(--color));
+  box-shadow: 0 0 10px rgba(var(--color), .4);
+  outline: none;
+  display: flex;
+  align-items: center;
+  padding: .5em 1em;
+}
+
+.btn-class-name:hover {
+  box-shadow: 0 0 0 5px rgba(var(--color), .5);
+}
+
+.btn-class-name span {
+  transform: scale(.8);
+  transition: .3s;
+}
+
+.btn-class-name:hover span {
+  transform: scale(1);
+}
+
+.btn-class-name svg {
+  font-size: 0;
+  transform: scale(0.5) translateX(0%) rotate(-180deg);
+  transition: .3s;
+}
+
+.btn-class-name:hover svg {
+  font-size: 20px;
+  transform: scale(1) translateX(20%) rotate(0deg);
+}
+
+.btn-class-name:active {
+  transition: 0s;
+  box-shadow: 0 0 0 5px rgb(var(--color));
+}
+
+.redes {
+    margin-top: 30px; 
+    margin-left: 42%;
+}
+
+.redes li{
+    display: inline-block;
+    list-style: none;
+}
+
+.logoRedes {
+    width: 50px;
+    padding: 10px;
+}
+
+.logoRedes:hover {
+  background-color: white;
+}
+

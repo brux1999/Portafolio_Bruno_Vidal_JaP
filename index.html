@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portafolio Bruno Vidal</title>
+    <link rel="stylesheet" href="estilo.css" />
+    <link rel="icon" type="image/png" href="img/portafolio.png" />
+  </head>
+  <body>
+    <!--Encabezado de la pagina-->
+
+    <header id="header">
+      <nav id="categorias">
+        <ul>
+          <li><a href="#expLa">Experiencia Laboral</a></li>
+          <li><a href="#estudios">Estudios</a></li>
+          <li><a href="#devTools">Proyectos</a></li>
+          <li><a href="#contact">Contacto y redes sociales</a></li>
+          <!--El simbolo # dentro del href permite indexar un link 
+            a cierta id dentro de la misma web-->
+        </ul>
+      </nav>
+    </header>
+
+    <!--Empieza el cuerpo de la pagina-->
+
+    <tbody id="tbody">
+      <div class="fotoPersonal">
+        <img src="img/miFoto.jpg" alt="Foto personal" />
+      </div>
+
+      <div class="titulo">
+        <h1>
+          Hola! Me llamo Bruno y soy un desarrolador web dispuesto a ayudarte.
+        </h1>
+      </div>
+      <p class="presentacion">
+        En mi portafolio podrás encontrar información sobre mis estudios y la
+        trayectoria que llevo en el mundo de las IT.
+      </p>
+
+      <!--Tabla para Experiencia Laboral-->
+
+      <div id="expLa">
+        <h2>Experiencia Laboral</h2>
+        <table class="tabledatos">
+          <tr>
+            <th>Nombre de la empresa</th>
+            <th>Tarea encomendada</th>
+            <th>Tiempo trabajado</th>
+          </tr>
+          <tr>
+            <td>Lorem, ipsum dolor.</td>
+            <td>Lorem ipsum dolor sit.</td>
+            <td>Lorem ipsum dolor sit amet.</td>
+          </tr>
+          <tr>
+            <td>Lorem, ipsum.</td>
+            <td>Lorem, ipsum.</td>
+            <td>Lorem, ipsum dolor.</td>
+          </tr>
+          <td>Lorem ipsum dolor sit.</td>
+          <td>Lorem ipsum dolor sit.</td>
+          <td>Lorem, ipsum dolor.</td>
+        </table>
+      </div>
+
+      <!--Tabla para Educación-->
+
+      <div id="estudios">
+        <h2>Estudios</h2>
+        <table class="tabledatos">
+          <tr>
+            <th>Nombre de la institución</th>
+            <th>Nombre del curso</th>
+            <th>Años cursados</th>
+          </tr>
+          <tr>
+            <td>Facultad de Derecho (UDELAR)</td>
+            <td>Primer año de Abogacía</td>
+            <td>2020-2021 (Postergado)</td>
+          </tr>
+          <tr>
+            <td>Dickens</td>
+            <td>Curso avanzado de inglés</td>
+            <td>2018-2020</td>
+          </tr>
+          <td>Jovenes a Programar (ceibal)</td>
+          <td>Curso de Desarrollo Web</td>
+          <td>Actualidad</td>
+        </table>
+      </div>
+
+      <!--Proyectos/Dev Tools-->
+
+      <div id="devTools">
+        <h2>
+          Proyectos
+          <div class="pyramid-loader">
+            <div class="wrapper">
+              <span class="side side1"></span>
+              <span class="side side2"></span>
+              <span class="side side3"></span>
+              <span class="side side4"></span>
+              <span class="shadow"></span>
+            </div>
+          </div>
+        </h2>
+        <list class="tools">
+          <img class="html" src="img/html-5.png" alt="HTML" />
+          <li>HTML</li>
+          <img class="css" src="img/css.png" alt="css" />
+          <li>CSS</li>
+          <img class="js" src="img/js.png" alt="Javascript" />
+          <li>Javascript</li>
+        </list>
+      </div>
+      <div id="proyects">
+        <div class="book1">
+          <p>Hello</p>
+          <div class="cover1">
+            <p>Proyecto</p>
+          </div>
+        </div>
+        <div class="book2">
+          <p>Hello</p>
+          <div class="cover2">
+            <p>Proyecto</p>
+          </div>
+        </div>
+        <div class="book3">
+          <p>Hello</p>
+          <div class="cover3">
+            <p>Proyecto</p>
+          </div>
+        </div>
+      </div>
+    </tbody>
+
+    <!--Contacto-->
+
+    <footer id="footer">
+      <div id="contact">
+        <h2>Contacto y redes sociales</h2>
+        <label for="correo">Tu correo:</label
+        ><input type="text" name="correocliente" required />
+        <label for="asunto">Asunto:</label><input type="text" name="asunto" />
+        <label for="mensajeExtra">Mensaje adicional:</label>
+        <textarea name="MA" id="mensajeAdicional" required></textarea>
+        <input class="btn-class-name" type="submit" value="Enviar" />
+      </div>
+      <div class="redes">
+        <list>
+          <li>
+            <a href="https://www.instagram.com/brunovcw/"
+              ><img class="logoRedes" src="img/instagram.png" alt="Instagram"
+            /></a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/brunovcw/"
+              ><img class="logoRedes" src="img/facebook.png" alt="Facebook"
+            /></a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/brunovcw/"
+              ><img class="logoRedes" src="img/linkedin.png" alt="Linkedin"
+            /></a>
+          </li>
+        </list>
+      </div>
+    </footer>
+  </body>
+</html>
