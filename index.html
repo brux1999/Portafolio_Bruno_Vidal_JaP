@@ -6,17 +6,17 @@
     <title>Portafolio Bruno Vidal</title>
     <link rel="stylesheet" href="estilo.css" />
     <link rel="icon" type="image/png" href="img/portafolio.png" />
+    <script src="script.js"></script>
   </head>
   <body>
     <!--Encabezado de la pagina-->
-
     <header id="header">
       <nav id="categorias">
         <ul>
           <li><a href="#expLa">Experiencia Laboral</a></li>
           <li><a href="#estudios">Estudios</a></li>
           <li><a href="#devTools">Proyectos</a></li>
-          <li><a href="#contact">Contacto y redes sociales</a></li>
+          <li><a href="#footer">Contacto y redes sociales</a></li>
           <!--El simbolo # dentro del href permite indexar un link 
             a cierta id dentro de la misma web-->
         </ul>
@@ -32,11 +32,11 @@
 
       <div class="titulo">
         <h1>
-          Hola! Me llamo Bruno y soy un desarrolador web dispuesto a ayudarte.
+          Me llamo Bruno y soy un desarrolador web dispuesto a ayudarte.
         </h1>
       </div>
       <p class="presentacion">
-        En mi portafolio podrás encontrar información sobre mis estudios y la
+        En mi portafolio podrás encontrar información sobre mis estudios <br> y la
         trayectoria que llevo en el mundo de las IT.
       </p>
 
@@ -51,18 +51,15 @@
             <th>Tiempo trabajado</th>
           </tr>
           <tr>
-            <td>Lorem, ipsum dolor.</td>
-            <td>Lorem ipsum dolor sit.</td>
-            <td>Lorem ipsum dolor sit amet.</td>
+            <td>Emprendimiento propio</td>
+            <td>Jardinería</td>
+            <td>Actual</td>
           </tr>
           <tr>
-            <td>Lorem, ipsum.</td>
-            <td>Lorem, ipsum.</td>
-            <td>Lorem, ipsum dolor.</td>
+            <td>Agencia de vivienda</td>
+            <td>Control de stock</td>
+            <td>2020-2021</td>
           </tr>
-          <td>Lorem ipsum dolor sit.</td>
-          <td>Lorem ipsum dolor sit.</td>
-          <td>Lorem, ipsum dolor.</td>
         </table>
       </div>
 
@@ -116,23 +113,32 @@
           <li>Javascript</li>
         </list>
       </div>
+
+      <!--Proyect Books-->
+
       <div id="proyects">
         <div class="book1">
-          <p>Hello</p>
+            <a href="https://brux1999.github.io/Portafolio_Bruno_Vidal_JaP/">
+              <img class="proyectimg" src="img/proyect1.png" alt="Portafolio"></img>
+            </a>
           <div class="cover1">
-            <p>Proyecto</p>
+            <p>Portafolio Personal</p>
           </div>
         </div>
+
         <div class="book2">
-          <p>Hello</p>
+            <a href="https://brux1999.github.io/Proyecto_E-Commerce_JaP/">
+              <img class="proyectimg" src="img/proyect2.png" alt="E-Commerce">
+            </a>
           <div class="cover2">
-            <p>Proyecto</p>
+            <p>E-Commerce</p>
           </div>
         </div>
+
         <div class="book3">
-          <p>Hello</p>
+          <p>En desarrollo</p>
           <div class="cover3">
-            <p>Proyecto</p>
+            <p>Proyecto 3</p>
           </div>
         </div>
       </div>
@@ -141,14 +147,26 @@
     <!--Contacto-->
 
     <footer id="footer">
-      <div id="contact">
-        <h2>Contacto y redes sociales</h2>
-        <label for="correo">Tu correo:</label
-        ><input type="text" name="correocliente" required />
-        <label for="asunto">Asunto:</label><input type="text" name="asunto" />
-        <label for="mensajeExtra">Mensaje adicional:</label>
-        <textarea name="MA" id="mensajeAdicional" required></textarea>
-        <input class="btn-class-name" type="submit" value="Enviar" />
+      <h2>Contacto y redes sociales:</h2>
+      <div class="form-container">
+        <form class="form">
+          <div class="form-group">
+            <label for="email">Tu email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="textarea">Mensaje y/o consulta</label>
+            <textarea
+              name="textarea"
+              id="textarea"
+              rows="10"
+              cols="50"
+              required
+            >
+            </textarea>
+          </div>
+          <button class="form-submit-btn" type="submit">Submit</button>
+        </form>
       </div>
       <div class="redes">
         <list>
