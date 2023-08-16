@@ -1,96 +1,103 @@
-
 /*Algunas definiciones generales*/
 
 body {
-  background: rgb(65,133,13);
-  background: linear-gradient(90deg, rgba(65,133,13,1) 29%, rgba(0,0,0,1) 96%);
+  background: rgb(65, 133, 13);
+  background: linear-gradient(90deg, rgba(65, 133, 13, 1) 29%, rgba(0, 0, 0, 1) 96%);
+  margin: 0;
 }
 
 h2 {
-    border-radius: 10px;
-    font-family: 'RobotoCondensed';
-    color: white;
-    font-size: 80px;
-    text-align: center;
-    font-weight: 500;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 70px;
-    -webkit-text-stroke: 3px black ;
-  }
+  border-radius: 10px;
+  font-family: 'RobotoCondensed';
+  color: white;
+  font-size: 80px;
+  text-align: center;
+  font-weight: 500;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 70px;
+  -webkit-text-stroke: 3px black;
+}
 
-  @font-face {
-    font-family:'RobotoCondensed';
-    src: url(./fonts/RobotoCondensed-Regular.ttf) format('truetype');
-    font-style: normal;
-    font-weight: normal;
-  }
+@font-face {
+  font-family: 'RobotoCondensed';
+  src: url(./fonts/RobotoCondensed-Regular.ttf) format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
 
-  /* Empieza el encabezado de la pagina */
+/* Empieza el encabezado de la pagina */
 
 .titulo {
-    font-family: 'RobotoCondensed';
-    color: #fff; 
-    text-align: center;
-    letter-spacing: 3px;
-    margin-top: 70px;
+  font-family: 'RobotoCondensed';
+  color: #fff;
+  text-align: center;
+  letter-spacing: 3px;
+  margin-top: 70px;
 }
 
 .fotoPersonal {
-    width: 250px; /* Ajusta el tamaño de la imagen a tu preferencia */
-    height: 250px; /* Ajusta el tamaño de la imagen a tu preferencia */
-    border-radius: 50%; /* Hace que la imagen tenga forma circular */
-    overflow: hidden; /* Oculta cualquier contenido que se salga del contenedor circular */
-    margin-top: 100px;
-    margin-left: 40%;
-    border: 2px solid;
-    border-color: #fff;
+  width: 250px;
+  /* Ajusta el tamaño de la imagen a tu preferencia */
+  height: 250px;
+  /* Ajusta el tamaño de la imagen a tu preferencia */
+  border-radius: 50%;
+  /* Hace que la imagen tenga forma circular */
+  overflow: hidden;
+  /* Oculta cualquier contenido que se salga del contenedor circular */
+  margin-top: 100px;
+  margin-left: 40%;
+  border: 2px solid;
+  border-color: #fff;
 }
 
 .fotoPersonal img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ajusta la imagen dentro del contenedor manteniendo la proporción */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Ajusta la imagen dentro del contenedor manteniendo la proporción */
 }
 
 .presentacion {
-    font-family:'RobotoCondensed';
-    font-size: 20px;
-    text-align: center;
-    color: white;
-    padding-bottom: 8%;
+  font-family: 'RobotoCondensed';
+  font-size: 20px;
+  text-align: center;
+  color: white;
+  padding-bottom: 8%;
 }
 
-#categorias {
-    font-family: 'RobotoCondensed';
-    font-size: 100%;
-    list-style: none;
-    padding: 0; /* Eliminamos el padding para que no haya espacios extra */
-    margin: 0; /* Eliminamos el margen para que no haya espacios extra */
-    background-color: #62AB37; /* Color de fondo de la barra de navegación */
-    position: fixed; /* Fijamos la barra de navegación en la parte superior */
-    top: 0; /* Posicionamos la barra en la parte superior */
-    left: 0; /* Alineamos la barra a la izquierda */
-    width: 100%; 
-    text-align: center;
-    z-index: 999; /*Valor alto de z index para asegurarse que este por encima de todo*/
+nav {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #62AB37;
+  padding: 10px;
+  z-index: 999;
 }
 
-#categorias li {
-    display: inline-block; /* Convertimos los elementos en línea horizontal */
-    margin: 0;
+.navbtn img {
+  width: 30px;
+  cursor: pointer;
 }
 
-#categorias li a {
-    padding: 70px 70px 15px;
-    text-decoration: none;
-    color:white;
-    background-color: #62AB37;
+a .opciones li {
+  font-family: 'RobotoCondensed';
+  color: white;
+  padding: 0;
+  font-size: 20px;
+  list-style: none;
+  display: inline;
 }
 
-#categorias li a:hover {
-    color: black;
-    background-color: #5EEB5B;
+.opciones a {
+  padding: 10px;
+}
+
+.opciones a:hover {
+  color: black;
+  background-color: #5EEB5B;
 }
 
 /*Empieza el cuerpo de la pagina*/
@@ -107,139 +114,144 @@ h2 {
   background-image: url(./img/proyects.jpg);
 }
 
-.tabledatos, .tabledatos th, .tabledatos tr, .tabledatos td {
-    letter-spacing: normal;
-    font-family:Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    table-layout: fixed;
-    width: 100%;
-    text-align: left;
-    border: 1px solid black;
-    border-collapse: collapse;
-    background-color: #62AB37;
-    list-style: none;
-    color: white;
+.tabledatos,
+.tabledatos th,
+.tabledatos tr,
+.tabledatos td {
+  letter-spacing: normal;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  table-layout: fixed;
+  width: 100%;
+  text-align: left;
+  border: 1px solid white;
+  border-collapse: collapse;
+  background-color: #62AB37;
+  list-style: none;
+  color: white;
 }
 
 .tabledatos th {
-    font-family: 'RobotoCondensed';
-    color: black;
-    background-color: white;
-    padding: 20px;
-  }
+  font-family: 'RobotoCondensed';
+  color: white;
+  background-color: black;
+  padding: 20px;
+}
 
 .tabledatos td {
-    padding: 30px;
-}
-
-.tools {
-  text-align: center;
-  margin-left: 27%; 
-}
-
-.tools li {
-    display: inline-block;
-    color: #fff;
-    font-size: 40px;
-    font-family:'RobotoCondensed';
-    list-style:none;
-    background-size:cover;
-    padding: 30px;
-}
-
-.tools > img {
-  display: inline-block;
-  width: 50px;
-  list-style: none;
-  padding: 0; 
-  margin: 0;
+  padding: 30px;
 }
 
 /*Dev Tools*/
 
+.tools {
+  text-align: center;
+  margin-left: 27%;
+}
+
+.tools li {
+  display: inline-block;
+  color: #fff;
+  font-size: 40px;
+  font-family: 'RobotoCondensed';
+  list-style: none;
+  background-size: cover;
+  padding: 30px;
+}
+
+.tools>img {
+  display: inline-block;
+  width: 50px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 /*Piramide giratoria*/
 
 .pyramid-loader {
-    width: 50px;
-    height: 50px;
-    display: block;
-    transform-style: preserve-3d;
-    transform: rotateX(-20deg);
-    float:left;
+  width: 50px;
+  height: 50px;
+  display: block;
+  transform-style: preserve-3d;
+  transform: rotateX(-20deg);
+  float: left;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  animation: spin 5s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotateY(360deg);
   }
-  
-  .wrapper {
-    width: 100%;
-    height: 100%;
-    transform-style: preserve-3d;
-    animation: spin 5s linear infinite;
-  }
-  
-  @keyframes spin {
-    100% {
-      transform: rotateY(360deg);
-    }
-  }
-  
-  .pyramid-loader .wrapper .side {
-    width: 70px;
-    height: 70px;
+}
+
+.pyramid-loader .wrapper .side {
+  width: 70px;
+  height: 70px;
   /* you can choose any gradient or color you want */
-    /* background: radial-gradient( #2F2585 10%, #F028FD 70%, #2BDEAC 120%); */
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    transform-origin: center top;
-    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-  }
-  
-  .pyramid-loader .wrapper .side1 {
-    transform: rotateZ(-30deg) rotateY(90deg);
-    background: conic-gradient( #2BDEAC, #F028FD, #D8CCE6, #2F2585);
-  }
-  
-  .pyramid-loader .wrapper .side2 {
-    transform: rotateZ(30deg) rotateY(90deg);
-    background: conic-gradient( #2F2585, #D8CCE6, #F028FD, #2BDEAC);
-  }
-  
-  .pyramid-loader .wrapper .side3 {
-    transform: rotateX(30deg);
-    background: conic-gradient( #2F2585, #D8CCE6, #F028FD, #2BDEAC);
-  }
-  
-  .pyramid-loader .wrapper .side4 {
-    transform: rotateX(-30deg);
-    background: conic-gradient( #2BDEAC, #F028FD, #D8CCE6, #2F2585);
-  }
-  
-  .pyramid-loader .wrapper .shadow {
-    width: 60px;
-    height: 60px;
-    background: #8B5AD5;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    transform: rotateX(90deg) translateZ(-40px);
-    filter: blur(12px);
-  }
-  
+  /* background: radial-gradient( #2F2585 10%, #F028FD 70%, #2BDEAC 120%); */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  transform-origin: center top;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.pyramid-loader .wrapper .side1 {
+  transform: rotateZ(-30deg) rotateY(90deg);
+  background: conic-gradient(#2BDEAC, #F028FD, #D8CCE6, #2F2585);
+}
+
+.pyramid-loader .wrapper .side2 {
+  transform: rotateZ(30deg) rotateY(90deg);
+  background: conic-gradient(#2F2585, #D8CCE6, #F028FD, #2BDEAC);
+}
+
+.pyramid-loader .wrapper .side3 {
+  transform: rotateX(30deg);
+  background: conic-gradient(#2F2585, #D8CCE6, #F028FD, #2BDEAC);
+}
+
+.pyramid-loader .wrapper .side4 {
+  transform: rotateX(-30deg);
+  background: conic-gradient(#2BDEAC, #F028FD, #D8CCE6, #2F2585);
+}
+
+.pyramid-loader .wrapper .shadow {
+  width: 60px;
+  height: 60px;
+  background: #8B5AD5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  transform: rotateX(90deg) translateZ(-40px);
+  filter: blur(12px);
+}
+
 /*Continuan las Dev Tools*/
 
 
 #devTools {
-    padding: 0; /* Eliminamos el padding para que no haya espacios extra */
-    margin: 0; /* Eliminamos el margen para que no haya espacios extra */
-    list-style: none;
-    padding-top: 5%;
-    padding-bottom: 5%;
-    margin-bottom: 20px;
+  padding: 0;
+  /* Eliminamos el padding para que no haya espacios extra */
+  margin: 0;
+  /* Eliminamos el margen para que no haya espacios extra */
+  list-style: none;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  margin-bottom: 20px;
 }
 
 /*Seccion proyectos*/
@@ -281,7 +293,7 @@ h2 {
   font-family: 'RobotoCondensed';
   top: 0;
   position: absolute;
-  background-color:#62AB37;
+  background-color: #62AB37;
   width: 100%;
   height: 100%;
   border-radius: 10px;
@@ -460,7 +472,7 @@ h2 {
 
 .form-container {
   width: 400px;
-  background-color:black; 
+  background-color: black;
   border: 2px solid transparent;
   padding: 32px 50px;
   font-size: 20px;
@@ -493,7 +505,7 @@ h2 {
 .form-container .form-group label {
   display: block;
   margin-bottom: 5px;
-  color:#62AB37;
+  color: #62AB37;
   font-weight: 600;
   font-size: 12px;
   font-family: 'RobotoCondensed';
@@ -527,7 +539,7 @@ h2 {
 
 .form-container .form-group input:focus {
   outline: none;
-  border-color:#5EEB5B;
+  border-color: #5EEB5B;
 }
 
 .form-container .form-group textarea:focus {
@@ -541,10 +553,10 @@ h2 {
   justify-content: center;
   align-self: flex-start;
   font-family: 'RobotoCondensed';
-  color:black;
+  color: black;
   font-weight: 600;
   width: 40%;
-  background:#5EEB5B;
+  background: #5EEB5B;
   border: 2px solid #62AB37;
   padding: 12px 16px;
   font-size: inherit;
@@ -560,22 +572,21 @@ h2 {
 }
 
 .redes {
-    margin-top: 50px; 
-    margin-left: 42%;
+  margin-top: 50px;
+  margin-left: 42%;
 }
 
-.redes li{
-    display: inline-block;
-    list-style: none;
+.redes li {
+  display: inline-block;
+  list-style: none;
 }
 
 .logoRedes {
-    width: 50px;
-    padding: 10px;
+  width: 50px;
+  padding: 10px;
 }
 
 .logoRedes:hover {
   background-color: white;
   border-radius: 10px;
 }
-
