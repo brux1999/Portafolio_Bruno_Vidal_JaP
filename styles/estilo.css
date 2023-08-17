@@ -4,7 +4,6 @@ body {
   background: rgb(65, 133, 13);
   background: linear-gradient(90deg, rgba(65, 133, 13, 1) 29%, rgba(0, 0, 0, 1) 96%);
   margin: 0;
-  padding: 0;
 }
 
 h2 {
@@ -22,7 +21,7 @@ h2 {
 
 @font-face {
   font-family: 'RobotoCondensed';
-  src: url(../fonts/RobotoCondensed-Regular.ttf) format('truetype');
+  src: url(./fonts/RobotoCondensed-Regular.ttf) format('truetype');
   font-style: normal;
   font-weight: normal;
 }
@@ -69,11 +68,12 @@ h2 {
 
 nav {
   top: 0;
-  width: 100%;
   position: fixed;
+  width: 100%;
   display: flex;
+  align-items: center;
   background-color: #62AB37;
-  padding: 15px;
+  padding: 10px;
   z-index: 999;
 }
 
@@ -82,46 +82,36 @@ nav {
   cursor: pointer;
 }
 
-.opciones {
-  display: none;
-}
-
-.opciones.visible {
-  display: block;
-}
-
-.opciones li {
+a .opciones li {
   font-family: 'RobotoCondensed';
   color: white;
-  font-size: 15px;
+  padding: 0;
+  font-size: 20px;
   list-style: none;
   display: inline;
 }
 
 .opciones a {
-  text-decoration: none;
-  padding: 30px;
-  font-size: 20px;
-  color: #000;
+  padding: 10px;
 }
 
 .opciones a:hover {
-  color: white;
+  color: black;
   background-color: #5EEB5B;
 }
 
 /*Empieza el cuerpo de la pagina*/
 
 #expLa h2 {
-  background-image: url(../img/work.jpg);
+  background-image: url(./img/work.jpg);
 }
 
 #estudios h2 {
-  background-image: url(../img/study.jpg);
+  background-image: url(./img/study.jpg);
 }
 
 #devTools h2 {
-  background-image: url(../img/proyects.jpg);
+  background-image: url(./img/proyects.jpg);
 }
 
 .tabledatos,
@@ -204,6 +194,8 @@ nav {
 .pyramid-loader .wrapper .side {
   width: 70px;
   height: 70px;
+  /* you can choose any gradient or color you want */
+  /* background: radial-gradient( #2F2585 10%, #F028FD 70%, #2BDEAC 120%); */
   position: absolute;
   top: 0;
   left: 0;
