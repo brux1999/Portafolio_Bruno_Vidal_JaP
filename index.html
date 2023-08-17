@@ -6,17 +6,19 @@
     <title>Portafolio Bruno Vidal</title>
     <link rel="stylesheet" href="estilo.css" />
     <link rel="icon" type="image/png" href="img/portafolio.png" />
-    <script src="script.js"></script>
   </head>
   <body>
     <!--Encabezado de la pagina-->
     <header id="header">
       <nav id="categorias">
-        <ul>
-          <li><a href="#expLa">Experiencia Laboral</a></li>
-          <li><a href="#estudios">Estudios</a></li>
-          <li><a href="#devTools">Proyectos</a></li>
-          <li><a href="#footer">Contacto y redes sociales</a></li>
+        <div class="navbtn">
+          <img src="img/navBar.png" alt="opciones">  
+          </div>
+        <ul class="opciones">
+          <li><a class="expLa" href="#expLa">Experiencia Laboral</a></li>
+          <li><a class="estudios" href="#estudios">Estudios</a></li>
+          <li><a class="devTools" href="#devTools">Proyectos</a></li>
+          <li><a class="footer" href="#footer">Contacto y redes sociales</a></li>
           <!--El simbolo # dentro del href permite indexar un link 
             a cierta id dentro de la misma web-->
         </ul>
@@ -152,15 +154,14 @@
         <form class="form">
           <div class="form-group">
             <label for="email">Tu email</label>
-            <input type="email" id="email" name="email" required />
+            <input type="email" id="email" name="email" placeholder="Escribe tu email" required />
           </div>
           <div class="form-group">
             <label for="textarea">Mensaje y/o consulta</label>
             <textarea
               name="textarea"
               id="textarea"
-              rows="10"
-              cols="50"
+              maxlength="250"
               required
             >
             </textarea>
@@ -188,5 +189,7 @@
         </list>
       </div>
     </footer>
+    <!--Scripts-->
+    <script src="script.js"></script>
   </body>
 </html>
