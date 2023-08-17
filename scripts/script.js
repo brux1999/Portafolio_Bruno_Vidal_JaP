@@ -15,4 +15,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const navbtn = document.querySelector('.navbtn')
 })
 
-//me falta crear menu desplegable de categorias
+// funcion de desplegar opciones
+
+const navbtn = document.querySelector('.navbtn');
+const opciones = document.querySelector('.opciones');
+
+navbtn.addEventListener('click', () => {
+    opciones.classList.toggle('visible'); // Agrega o quita la clase 'visible' en cada clic
+});
